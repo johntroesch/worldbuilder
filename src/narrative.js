@@ -21,7 +21,6 @@ class Narrative extends React.Component{
         )
     }
     createWorld = ()=>{
-        ;
         let newworld = new World();
         this.setState({theworld: newworld.wtype, currentworld: newworld, bookmark: 1});
         console.log(newworld.wtype);
@@ -32,5 +31,3 @@ class Narrative extends React.Component{
 
 
 export default Narrative;
-
-//Todo: push arrays to a single variable, import here.  Randomize from this page, send to infoscreen via props
