@@ -6,6 +6,8 @@ class Infodiv extends React.Component{
         super(props);
         this.state = {
             content : "the world awaits forming",
+            plants: "Here, flora await discovery",
+            animals: "Here, you shall meet many interesting creatures",
             myworld: this.props.world
         }
     }
@@ -14,6 +16,8 @@ class Infodiv extends React.Component{
             <div>
                 <button onClick={this.showEnviron}>Environment</button>
                 <div id="environment">{this.state.content}</div>
+                <div id="flora">{this.state.plants}</div>
+                <div id="fauna">{this.state.animals}</div>
             </div>
         )
     }
@@ -22,7 +26,7 @@ class Infodiv extends React.Component{
         let environ = <p>This world is {this.state.myworld.wtype}.  The sky above you is a deep {this.state.myworld.color}.</p>
         this.setState({content: environ})
         console.log("fired")
-        console.log(this.state.myworld.wtype)
+        console.log(this.state.myworld)
     }
 }
 

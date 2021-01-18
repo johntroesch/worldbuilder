@@ -7,7 +7,8 @@ class Narrative extends React.Component{
         super()
         this.state = {bookmark: 0,
                     currentworld: "current world",
-                    theworld: "Here shalt be thy world"}
+                    theworld: "Here shalt be thy world",
+                    info: "The infodiv shall appear here"}
     }
     render(){
         return(
@@ -24,6 +25,7 @@ class Narrative extends React.Component{
         let newworld = new World();
         this.setState({theworld: newworld.wtype, currentworld: newworld, bookmark: 1});
         console.log(newworld.wtype);
+        console.log(this.state.currentworld.wtype + "to pass to child")
         console.log(this.state.bookmark);
         };
 }
