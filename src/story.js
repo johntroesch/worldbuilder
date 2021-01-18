@@ -5,7 +5,7 @@ let worldtypes = ["arid", "oceanic", "jungle", "tundra"];
 let buildings = ["house", "fortress", "castle", "orb", "dome"]
 
 //resources
-let colors = ["emerald", "azure", "vermillion", "murky"];
+let colors = ["purple", "cyan", "crimson", "beige"];
 let materials = ["stone", "steel", "glass"]
 
 //flora
@@ -18,12 +18,23 @@ class Story extends React.Component{
         randomize(subj){
              return subj[Math.floor(Math.random() * (subj.length))]
         }
+        
         render(){
-          return <div>
-              <p>You stand overlooking the {this.randomize(worldtypes)} world.</p>
-              <p>Above you, the sky is {this.randomize(colors)}</p>
-              <p>In the distance, a {this.randomize(materials) + " " + this.randomize(buildings)} can be seen. </p>
-              <p>Surveying the local flora, you note primarily {this.randomize(plants)}.</p>
+            let oceanCondition;
+            let rworldtype = this.randomize(worldtypes);
+            let rcolor = this.randomize(colors);
+            let rmaterial = this.randomize(materials);
+            let rbuilding = this.randomize(buildings);
+            let rplant = this.randomize(plants);
+            if (rworldtype==="oceanic"){
+                oceanCondition = "Small islands rise above the waves"
+            }
+          return <div className = "description" style= {{borderStyle: "solid", borderColor: rcolor}}>
+              <p>You stand overlooking the {rworldtype} world.</p>
+              <p>{oceanCondition}</p>
+              <p>Above you, the sky is {rcolor}</p>
+              <p>In the distance, a {rmaterial + " " + rbuilding} can be seen. </p>
+              <p>Surveying the local flora, you note primarily {rplant}.</p>
               </div>  
         }
 }
