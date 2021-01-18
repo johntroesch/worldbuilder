@@ -1,32 +1,29 @@
 import React from 'react';
-import World from './world';
-import Infodiv from './infodiv';
+
+import Story from './story';
 
 class Narrative extends React.Component{
     constructor(){
         super()
-        this.state = {bookmark: 0,
-                    currentworld: "current world",
-                    theworld: "Here shalt be thy world",
-                    info: "The infodiv shall appear here"}
+        this.state = {
+                info: "",
+                welcome: "A portal stands before you.  You feel nervous, but excited at the infinite possibilities it represents.  Enter the portal?",
+                button: "I am ready"
+
+            }
     }
     render(){
         return(
         <div>
-        <p>You awaken in a teleport circle</p>
-        <div>{this.state.theworld}</div>
-        <div>Here shall be the information</div>
-        <button onClick={this.createWorld}>create world</button>
-        <div><Infodiv world={this.state.currentworld} /></div>
+        <p>{this.state.welcome}</p>
+        <div>{this.state.info}</div>
+        <button onClick={this.createWorld}>{this.state.button}</button>
+        
         </div>
         )
     }
     createWorld = ()=>{
-        let newworld = new World();
-        this.setState({theworld: newworld.wtype, currentworld: newworld, bookmark: 1});
-        console.log(newworld.wtype);
-        console.log(this.state.currentworld.wtype + "to pass to child")
-        console.log(this.state.bookmark);
+        this.setState({info: <Story />, welcome: "You awaken in a teleport circle", button: "Take me to a new world"})
         };
 }
 
