@@ -1,10 +1,10 @@
 import './App.css';
-import Narrative from "./narrative"
+import Layout from "./layout"
 
 function App() {
   return (
     <div className="App">
-      <Narrative />
+        <Layout />
     </div>
   );
 }

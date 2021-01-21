@@ -29,6 +29,7 @@ class Story extends React.Component{
             if (rworldtype==="oceanic"){
                 oceanCondition = "Small islands rise above the waves"
             }
+            
           return <div className = "description" style= {{borderStyle: "solid", borderColor: rcolor}}>
               <p>You stand overlooking the {rworldtype} world.</p>
               <p>{oceanCondition}</p>
