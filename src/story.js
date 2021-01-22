@@ -30,7 +30,7 @@ class Story extends React.Component{
                 oceanCondition = "Small islands rise above the waves"
             }
             
-          return <div className = "description" style= {{borderStyle: "solid", borderColor: rcolor}}>
+          return <div className = "description" style= {{borderStyle: "solid", backgroundImage: "radial-gradient(circle, white 30%," + rcolor + " 70%)" }}>
               <p>You stand overlooking the {rworldtype} world.</p>
               <p>{oceanCondition}</p>
               <p>Above you, the sky is {rcolor}</p>

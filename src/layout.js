@@ -2,6 +2,7 @@ import React from 'react';
 import Narrative from './narrative';
 import ImageView from './imageView';
 import InfoView from './info';
+import LandingPage from './landingpage';
 
 
 const narrative = <Narrative />
@@ -10,7 +11,7 @@ const info = <InfoView />
 class Layout extends React.Component{
     constructor(){
         super();
-        this.state = {content: <p>"Default"</p>}
+        this.state = {content: <LandingPage />}
     }
     setContentNar=()=>{
         this.setState({content:narrative})

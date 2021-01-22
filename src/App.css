@@ -31,6 +31,7 @@
 .description{
   margin-left: 15em;
   margin-right: 15em;
+  padding: 3em;
 }
 
 .sidebar{
@@ -80,4 +81,16 @@
 .carouselImg{
   max-width: 100%;
   max-height:100%;
+}
+
+.sidebar > button{
+  border-radius: 15px;
+}
+
+.sidebar > button:hover{
+  background-color: bisque;
+}
+
+.landingdiv{
+  padding-left: 5em;
 }
