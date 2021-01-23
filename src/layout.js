@@ -24,10 +24,13 @@ class Layout extends React.Component{
     }    
     render(){
        return <div className="layout">
-            <nav className="sidebar">
-                <button onClick={this.setContentNar}>World Builder</button>
-                <button onClick={this.setContentImages}>Images</button>
-                <button onClick={this.setContentInfo}>Information</button>
+           <nav className="topbar">
+           <h1>The World Builder Project</h1>
+            <ul className="navbar">
+                <li onClick={this.setContentNar}>World Builder</li>
+                <li onClick={this.setContentImages}>Images</li>
+                <li onClick={this.setContentInfo}>Information</li>
+            </ul>
             </nav>
             <div className="content">{this.state.content}</div>
         </div>
